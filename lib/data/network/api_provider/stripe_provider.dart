@@ -1,8 +1,11 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 
 class StripeProvider extends GetConnect {
+  String stripeKey = dotenv.env['STRIPE_SECRET_KEY']!;
   createPaymentIntent(String amount, String currency, String customerId) async {
     String url = 'https://api.stripe.com/v1/payment_intents';
+    
     print('apiprovider run');
     print("amount$amount");
     print("currency$currency");
@@ -22,7 +25,7 @@ class StripeProvider extends GetConnect {
 
     Map<String, String> headers = {
       'Authorization':
-          'Bearer sk_test_51QrYwKCtSQhx4DZU1kR1GlmhvJ2uD2FDQJsAq8aQjRa58QudmjvVHk3gC9H8gnMUByJs8HbMfdXmWCSqt3z5QXr20028oLRNVR',
+          'Bearer $stripeKey',
       'Content-Type': 'application/x-www-form-urlencoded'
     };
 
@@ -52,7 +55,7 @@ class StripeProvider extends GetConnect {
       body,
       headers: {
         'Authorization':
-            'Bearer sk_test_51QrYwKCtSQhx4DZU1kR1GlmhvJ2uD2FDQJsAq8aQjRa58QudmjvVHk3gC9H8gnMUByJs8HbMfdXmWCSqt3z5QXr20028oLRNVR',
+            'Bearer $stripeKey',
         'Content-Type': 'application/x-www-form-urlencoded'
       },
     );
@@ -83,7 +86,7 @@ class StripeProvider extends GetConnect {
       encodedBody,
       headers: {
         'Authorization':
-            'Bearer sk_test_51QrYwKCtSQhx4DZU1kR1GlmhvJ2uD2FDQJsAq8aQjRa58QudmjvVHk3gC9H8gnMUByJs8HbMfdXmWCSqt3z5QXr20028oLRNVR',
+            'Bearer $stripeKey',
         'Stripe-Version': '2023-10-16',
         'Content-Type': 'application/x-www-form-urlencoded'
       },

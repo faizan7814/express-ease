@@ -4,8 +4,8 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:express_ease/res/icons/icons.dart';
-import 'package:express_ease/ui/map/map_provider.dart';
-import 'package:express_ease/ui/map/places_model.dart';
+import 'package:express_ease/data/network/api_provider/map_provider.dart';
+import 'package:express_ease/data/modals/places_model.dart';
 import 'package:express_ease/utils/cutom_toast/custom_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';

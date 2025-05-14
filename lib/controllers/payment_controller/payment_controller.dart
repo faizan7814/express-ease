@@ -1,4 +1,4 @@
-import 'package:express_ease/controllers/payment_controller/stripe_provider.dart';
+import 'package:express_ease/data/network/api_provider/stripe_provider.dart';
 import 'package:express_ease/data/storage_services/storage_services.dart';
 import 'package:express_ease/ui/home/order_summary/order_confirmed.dart';
 import 'package:express_ease/utils/custom_progress_indicator/cutom_progress_indicator.dart';

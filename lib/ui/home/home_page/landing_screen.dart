@@ -5,7 +5,7 @@ import 'package:express_ease/res/colors/colors.dart';
 import 'package:express_ease/res/images/images.dart';
 import 'package:express_ease/res/routes/route_names.dart';
 import 'package:express_ease/ui/home/send_parcel/bottom_sheet/date_picker_sheet.dart';
-import 'package:express_ease/ui/map/map_controller.dart';
+import 'package:express_ease/controllers/map_controller.dart';
 import 'package:express_ease/ui/parcel_status/track_parcel_card.dart';
 import 'package:flutter/material.dart';
 

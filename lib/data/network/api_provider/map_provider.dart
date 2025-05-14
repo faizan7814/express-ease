@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class MapProvider extends GetConnect {
+ String kplaceApiKey = dotenv.env['MAP_KEY']!;
+
   Future<Response> getSuggestions(String input, String sessionId) async {
-    String kplaceApiKey = 'AIzaSyD68_vw1gGE7LVVjJ5ZShy7qWwm9Rq0CBQ';
+   
     String baseURL =
         "https://maps.googleapis.com/maps/api/place/autocomplete/json";
     String url =

@@ -1,6 +1,6 @@
 import 'package:express_ease/res/colors/colors.dart';
 import 'package:express_ease/res/icons/icons.dart';
-import 'package:express_ease/ui/map/map_controller.dart';
+import 'package:express_ease/controllers/map_controller.dart';
 import 'package:express_ease/utils/mystyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

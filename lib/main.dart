@@ -3,13 +3,19 @@ import 'package:express_ease/res/routes/app_routes.dart';
 import 'package:express_ease/res/routes/route_names.dart';
 import 'package:express_ease/utils/size_config.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Stripe.publishableKey =
-      'pk_test_51QrYwKCtSQhx4DZUWTepuLQMo5lOQ3dfDtkfxKowxao2MuvH522qh2aZICuRdldeZ04wRX25th9kKXe5iLy04njL004K3L4eRH';
+  try {
+    await dotenv.load();
+  } catch (e) {
+    print("Error loading .env: $e");
+  }
+
+  Stripe.publishableKey = dotenv.env['STRIPW_PUBLISH_KEY']!;
   runApp(const MyApp());
 }
 

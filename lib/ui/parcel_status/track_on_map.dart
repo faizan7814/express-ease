@@ -3,7 +3,7 @@ import 'package:express_ease/res/colors/colors.dart';
 import 'package:express_ease/res/icons/icons.dart';
 import 'package:express_ease/res/images/images.dart';
 import 'package:express_ease/res/permisssion_handler/communication_helper.dart';
-import 'package:express_ease/ui/map/search_map_screen.dart';
+import 'package:express_ease/my_widgets/map/search_map_screen.dart';
 import 'package:express_ease/utils/mystyles.dart';
 import 'package:express_ease/utils/size_config.dart';
 import 'package:flutter/material.dart';
